@@ -1,27 +1,28 @@
 
 # carousel-component
 
+This is a simple carousel component which support:
+- **Mobile and Web**
+- **Swipes**
+- **Pagination**
+
 ## Install
 
-```angular2html
-npm install --save carousel-component
+```console
+git clone https://github.com/mrdrummy93/carousel-component.git
+cd carousel-component
+npm install
 ```
 
 or
 
-```angular2html
-yarn add carousel-component
+```console
+git clone https://github.com/mrdrummy93/carousel-component.git
+cd carousel-component
+yarn install
 ```
 
-### Note
-
-`carousel-component` is using [styled-components](https://github.com/styled-components/styled-components) for styling. Don't forget to install it:
-
-```bash
-npm install --save styled-components
-```
-
-##Usage
+## Usage
 
 ```jsx
 import React, {Component} from 'react';
@@ -38,28 +39,23 @@ const App = () => {
   ];
 
   return (
-    <Carousel width={ELEMENT_WIDTH} swipe={ELEMENT_SWIPE}>
+    <Carousel width={ELEMENT_WIDTH} swipe={REQUIRED_SWIPE}>
       {exampleItems.map(item => <div key={item.id}>{item.title}</div>)}
     </Carousel>
   )
 }
 ```
 
-##Development
+## Attributes
 
-```console
-git clone https://github.com/mrdrummy93/carousel-component.git
-cd carousel-component
-npm
-```
+| Name  | Is Required  | Description |
+|:----- |:------------:| :---------- |
+| width |     Yes      | Setting the width of an element |
+| swipe |      No      | Setting the distance required for swiping |
 
-###To run example
+### To run example
 ```console
-npm example
+npm run example
 ```
 
 The application is running at http://localhost:3000
-
-##License
-
-MIT © [mrdrummy93](https://github.com/mrdrummy93)

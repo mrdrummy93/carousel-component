@@ -4,6 +4,7 @@ import CarouselWrapper from './styled/CarouselWrapper';
 import Element from './styled/Element';
 import ElementWrapper from './styled/ElementWrapper';
 import RenderChild from './styled/RenderChild';
+import Button from './styled/Button';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -148,8 +149,9 @@ class Carousel extends React.Component {
           onTouchEnd={this.pointerEnd}
           onMouseUp={this.pointerEnd}
         >
-          <button type="button" onClick={this.onClickLeft}>❮</button>
+          <Button type="button" onClick={this.onClickLeft}>❮</Button>
           <div
+            style={{ outline: 'none' }}
             role="button"
             tabIndex={0}
             onTouchStart={this.onTouchStart}
@@ -165,7 +167,7 @@ class Carousel extends React.Component {
               <Pagination key={i} onClick={this.onPaginationClick(i)} />
             ))}
           </Element>
-          <button type="button" onClick={this.onClickRight}>❯</button>
+          <Button type="button" onClick={this.onClickRight}>❯</Button>
         </CarouselWrapper>
       );
     }

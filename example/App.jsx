@@ -1,7 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import Carousel from '../src/Carousel';
-import { ELEMENT_SWIPE, ELEMENT_WIDTH, ELEMENTS_COUNT } from './constants';
+// eslint-disable-next-line import/named
+import { REQUIRED_SWIPE, ELEMENT_WIDTH, ELEMENTS_COUNT } from './constants';
 import ExampleElement from './ExampleElement';
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <Carousel width={ELEMENT_WIDTH} swipe={ELEMENT_SWIPE}>
+      <Carousel width={ELEMENT_WIDTH} swipe={REQUIRED_SWIPE}>
         {/* eslint-disable-next-line react/no-array-index-key */}
         {exampleChildrens.map((color, index) => <ExampleElement color={color} key={index} />)}
       </Carousel>
